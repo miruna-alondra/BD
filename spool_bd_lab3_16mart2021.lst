@@ -1,0 +1,1319 @@
+SQL> set lines 200
+SQL> set pages 100
+SQL> select to_char(sysdate, 'dd-mm-yyyy hh:mi:ss') from dual;
+
+TO_CHAR(SYSDATE,'DD                                                                                                                                                                                     
+-------------------                                                                                                                                                                                     
+16-03-2021 02:11:15                                                                                                                                                                                     
+
+SQL> insert into login_lab_bd values( 'Cocor Miruna-Alondra', '332CA', 'Lab3', user, sysdate, null, null);
+
+1 row created.
+
+SQL> select * from login_lab_bd;
+
+NUME_STUD                      GRUPA      LABORATOR  NUME_USER  DATA_IN   DATA_SF       DURATA                                                                                                          
+------------------------------ ---------- ---------- ---------- --------- --------- ----------                                                                                                          
+Cocor Miruna-Alondra           332CA      Lab3       SCOTT      16-MAR-21                                                                                                                               
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3
+SP2-0310: unable to open file "c:\Users\ASUS\Desktop\bd\bd_lab3.sql"
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+CREATE_TABLE COMPANII
+*
+ERROR at line 1:
+ORA-00900: invalid SQL statement 
+
+
+drop table companii
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+REFERENCES COMPANII(ID_COMPANIE)
+                   *
+ERROR at line 9:
+ORA-00907: missing right parenthesis 
+
+
+
+Table dropped.
+
+DROP TABLE FILIALE
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+CONSTRAINT FK_FILIALE_COMPANY FOREIGN KEY(ID_COMPANIE),
+                                                      *
+ERROR at line 9:
+ORA-00905: missing keyword 
+
+
+
+Table dropped.
+
+DROP TABLE FILIALE
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+CONSTRAINT FK_FILIALE_COMPANY FOREIGN KEY(ID_COMPANIE),
+                                                      *
+ERROR at line 9:
+ORA-00905: missing keyword 
+
+
+DROP TABLE FILIALE
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+CONSTRAINT FK_FILIALE_COMPANY FOREIGN KEY(ID_COMPANIE),
+                                                      *
+ERROR at line 9:
+ORA-00905: missing keyword 
+
+
+DROP TABLE FILIALE
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MATRICOL                                                                                                          NOT NULL NUMBER(6)
+ NUME                                                                                                                       VARCHAR2(10)
+ PRENUME                                                                                                                    VARCHAR2(10)
+ ID_COMPANIE                                                                                                                NUMBER(2)
+ ID_FILIALA                                                                                                                 NUMBER(1)
+ SALARIU                                                                                                                    NUMBER(7,2)
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+VALUES(1, 'HAKUNAMATATA', 'BUC', 'MIHAI PIRVULET')
+          *
+ERROR at line 2:
+ORA-12899: value too large for column "SCOTT"."COMPANII"."DENUMIRE" (actual: 12, maximum: 10) 
+
+
+
+1 row created.
+
+
+1 row created.
+
+INSERT INTO FILIALE(ID_COMPANIE, ID_FILIALA, DENUMIRE, LOCALITATE, NR_ANGAJATI)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.FK_FILIALE_COMPANY) violated - parent key not found 
+
+
+
+1 row created.
+
+INSERT INTO FILIALE(ID_COMPANIE, ID_FILIALA, DENUMIRE, LOCALITATE, NR_ANGAJATI)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.FK_FILIALE_COMPANY) violated - parent key not found 
+
+
+INSERT INTO SALARIATI(MATRICOL, NUME, PRENUME, ID_COMPANIE, ID_FILIALA, SALARIU)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.FK_SALARIATI_FILIALE) violated - parent key not found 
+
+
+INSERT INTO SALARIATI(MATRICOL, NUME, PRENUME, ID_COMPANIE, ID_FILIALA, SALARIU)
+*
+ERROR at line 1:
+ORA-02291: integrity constraint (SCOTT.FK_SALARIATI_FILIALE) violated - parent key not found 
+
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          3 SNAKES     BRAILA     BUTE                                                                                                                                                                  
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+          2 ALIUTSA    BRASOV     ALI PRICOP                                                                                                                                                            
+          3 SNAKES     BRAILA     BUTE                                                                                                                                                                  
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+Enter value for sal: 7000
+old   1: SELECT FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT FROM SALARIATI WHERE SALARIU='7000'
+SELECT FROM SALARIATI WHERE SALARIU='7000'
+       *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+Enter value for sal: 7000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='7000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+Enter value for localit: SEC6
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='SEC6'
+
+ID_COMPANIE ID_FILIALA DENUMIRE   LOCALITATE NR_ANGAJATI                                                                                                                                                
+----------- ---------- ---------- ---------- -----------                                                                                                                                                
+          1          2 F2         SEC6               200                                                                                                                                                
+
+Enter value for sal: 7000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='7000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BUC
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+Enter value for sal: 7000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='7000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> 7000
+SP2-0226: Invalid line number 
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+Enter value for sal: 7000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='7000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+Enter value for sal: 5000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='5000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+Enter value for sal: 5000
+old   1: SELECT * FROM SALARIATI WHERE SALARIU='&SAL'
+new   1: SELECT * FROM SALARIATI WHERE SALARIU='5000'
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BUC'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          1 HAKUNAMATA BUC        MIHAI PIRVULET                                                                                                                                                        
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='BUC'
+
+no rows selected
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> @c:\Users\ASUS\Desktop\bd\bd_lab3.txt
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+  MATRICOL NUME       PRENUME    ID_COMPANIE ID_FILIALA    SALARIU                                                                                                                                      
+---------- ---------- ---------- ----------- ---------- ----------                                                                                                                                      
+      1234 CHIFAN     CRISTIAN             1          1       2500                                                                                                                                      
+      1235 MIHAI      DARIUS               1          2       7000                                                                                                                                      
+      1233 GRIG       GIGEL                2          2       5000                                                                                                                                      
+
+Enter value for localit: BRAILA
+old   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='&LOCALIT'
+new   1: SELECT * FROM COMPANII WHERE LOCALITATE_SEDIU='BRAILA'
+
+ID_COMPANIE DENUMIRE   LOCALITATE NUME_CEO                                                                                                                                                              
+----------- ---------- ---------- --------------------                                                                                                                                                  
+          3 SNAKES     BRAILA     BUTE                                                                                                                                                                  
+
+
+NUME       PRENUME       SALARIU                                                                                                                                                                        
+---------- ---------- ----------                                                                                                                                                                        
+MIHAI      DARIUS           7000                                                                                                                                                                        
+GRIG       GIGEL            5000                                                                                                                                                                        
+
+Enter value for localit: SEC6
+old   1: SELECT * FROM FILIALE WHERE LOCALITATE='&LOCALIT'
+new   1: SELECT * FROM FILIALE WHERE LOCALITATE='SEC6'
+
+ID_COMPANIE ID_FILIALA DENUMIRE   LOCALITATE NR_ANGAJATI                                                                                                                                                
+----------- ---------- ---------- ---------- -----------                                                                                                                                                
+          1          2 F2         SEC6               200                                                                                                                                                
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> update login_lab_bd set data_sf= sysdate where laborator='Lab3';
+
+1 row updated.
+
+SQL> update login_lab_bd set durata= round((data_sf-data_in)*24*60) where laborator='Lab3';
+
+1 row updated.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select instance_number,instance_name, to_char(startup_time, 'dd-mm-yyyy hh:mi:ss'), host_name
+  2  from v$instance;
+
+INSTANCE_NUMBER INSTANCE_NAME    TO_CHAR(STARTUP_TIM HOST_NAME                                                                                                                                          
+--------------- ---------------- ------------------- ----------------------------------------------------------------                                                                                   
+              1 orcl             15-03-2021 01:45:30 DESKTOP-UVU85QS                                                                                                                                    
+
+SQL> select nume_stud, grupa, laborator, to_char(data_in, 'dd-mm-yyyy hh:mi:ss') data_inceput,
+  2  to_char(data_sf, 'dd-mm-yyyy hh:mi:ss') data_sfarsit, durata minute_lucrate from login_lab_bd;
+
+NUME_STUD                      GRUPA      LABORATOR  DATA_INCEPUT        DATA_SFARSIT        MINUTE_LUCRATE                                                                                             
+------------------------------ ---------- ---------- ------------------- ------------------- --------------                                                                                             
+Cocor Miruna-Alondra           332CA      Lab3       16-03-2021 02:12:05 16-03-2021 03:13:55             62                                                                                             
+
+SQL> spool off;

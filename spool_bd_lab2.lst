@@ -1,0 +1,452 @@
+SQL> select * from tab
+  2  ;
+
+TNAME                                                                                                                            TABTYPE        CLUSTERID                                               
+-------------------------------------------------------------------------------------------------------------------------------- ------------- ----------                                               
+DEPT                                                                                                                             TABLE                                                                  
+EMP                                                                                                                              TABLE                                                                  
+SALGRADE                                                                                                                         TABLE                                                                  
+BONUS                                                                                                                            TABLE                                                                  
+DEPARTAMENTE                                                                                                                     TABLE                                                                  
+GRILA_SALARIU                                                                                                                    TABLE                                                                  
+ANGAJATI                                                                                                                         TABLE                                                                  
+
+7 rows selected.
+
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  ID_PRODUS NUMBER(6) PRIMARY KEY,
+  4  DENUMIRE VARCHAR2(20),
+  5  DESCRIERE VARCHAR2(20),
+  6  PRET NUMBER(7,2),
+  7  STOC NUMBER(4)
+  8  };
+{
+*
+ERROR at line 2:
+ORA-00922: missing or invalid option 
+
+
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SQL> 
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SQL> 
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> };
+SP2-0042: unknown command "}" - rest of line ignored.
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };CREATE TABLE PRODUSE
+SP2-0734: unknown command beginning "};CREATE T..." - rest of line ignored.
+SQL> {
+SP2-0042: unknown command "{" - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> ID_PRODUS NUMBER(6) PRIMARY KEY,
+SP2-0734: unknown command beginning "ID_PRODUS ..." - rest of line ignored.
+SQL> DENUMIRE VARCHAR2(20),
+SP2-0734: unknown command beginning "DENUMIRE V..." - rest of line ignored.
+SQL> DESCRIERE VARCHAR2(20),
+SP2-0734: unknown command beginning "DESCRIERE ..." - rest of line ignored.
+SQL> PRET NUMBER(7,2),
+SP2-0734: unknown command beginning "PRET NUMBE..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL> STOC NUMBER(4)
+SP2-0734: unknown command beginning "STOC NUMBE..." - rest of line ignored.
+SQL> };
+SP2-0042: unknown command "}" - rest of line ignored.
+SQL> 
+SQL> 
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  ID_PRODUS NUMBER(6) PRIMARY KEY,
+  4  DENUMIRE VARCHAR2(20),
+  5  DESCRIERE VARCHAR2(20),
+  6  PRET NUMBER(7,2),
+  7  STOC NUMBER(4)
+  8  };
+{
+*
+ERROR at line 2:
+ORA-00922: missing or invalid option 
+
+
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  ID_PRODUS NUMBER{6} PRIMARY KEY,
+  4  DENUMIRE VARCHAR2{20},
+  5  DESCRIERE VARCHAR2{20},
+  6  PRET NUMBER{7,2},
+  7  STOC NUMBER{4}
+  8  };
+{
+*
+ERROR at line 2:
+ORA-00922: missing or invalid option 
+
+
+SQL> };
+SP2-0042: unknown command "}" - rest of line ignored.
+SQL> CREATE TABLE PRODUSE
+  2  {
+  3  ID_PRODUS NUMBER{6} PRIMARY KEY,
+  4  DENUMIRE VARCHAR2{20},
+  5  DESCRIERE VARCHAR2{20},
+  6  PRET NUMBER{7,2},
+  7  STOC NUMBER{4}
+  8  };
+{
+*
+ERROR at line 2:
+ORA-00922: missing or invalid option 
+
+
+SQL> CREATE TABLE PRODUSE
+  2  (
+  3  ID_PRODUS NUMBER(6) PRIMARY KEY,
+  4  DENUMIRE VARCHAR2)20),
+  5  DESCRIERE VARCHAR2(20),
+  6  PRET NUMBER(7,2),
+  7  STOC NUMBER(4)
+  8  );
+DENUMIRE VARCHAR2)20),
+                 *
+ERROR at line 4:
+ORA-00906: missing left parenthesis 
+
+
+SQL> CREATE TABLE PRODUSE
+  2  (
+  3  ID_PRODUS NUMBER(6) PRIMARY KEY,
+  4  DENUMIRE VARCHAR2(20),
+  5  DESCRIERE VARCHAR2(20),
+  6  PRET NUMBER(7,2),
+  7  STOC NUMBER(4)
+  8  );
+
+Table created.
+
+SQL> DESC PRODUSE
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ ID_PRODUS                                                                                                         NOT NULL NUMBER(6)
+ DENUMIRE                                                                                                                   VARCHAR2(20)
+ DESCRIERE                                                                                                                  VARCHAR2(20)
+ PRET                                                                                                                       NUMBER(7,2)
+ STOC                                                                                                                       NUMBER(4)
+
+SQL> CREATE TABLE USERI (
+  2  ID_USER NUMBER(5) PRIMARY KEY,
+  3  NUME VARCHAR2(20),
+  4  PRENUME VARCHAR2(20),
+  5  LOCALITATE VARCHAR2(20)
+  6  );
+
+Table created.
+
+SQL> CREATE TABLE COMENZI (
+  2  ID_COMANDA NUMBER(6) PRIMARY KEY,
+  3  ID_PROD NUMBER(6),
+  4  CANTITATE NUMBER(4),
+  5  PRET_TOTAL NUMBER(9,2),
+  6  ID_USER NUMBER(5),
+  7  CONSTRAINT FK_COMENZI_PRODUSE FOREIGN KEY(ID_PROD)
+  8  REFERENCES PRODUSE(ID_PRODUS),
+  9  CONSTRAINT FK_COMENZI_USERI FOREIGN KEY(ID_USER)
+ 10  REFERENCES PRODUSE(ID_USER)
+ 11  );
+REFERENCES PRODUSE(ID_USER)
+                   *
+ERROR at line 10:
+ORA-00904: "ID_USER": invalid identifier 
+
+
+SQL> CREATE TABLE COMENZI (
+  2  ID_COMANDA NUMBER(6) PRIMARY KEY,
+  3  ID_PROD NUMBER(6),
+  4  CANTITATE NUMBER(4),
+  5  PRET_TOTAL NUMBER(9,2),
+  6  ID_USER NUMBER(5),
+  7  CONSTRAINT FK_COMENZI_PRODUSE FOREIGN KEY(ID_PROD)
+  8  REFERENCES PRODUSE(ID_PRODUS),
+  9  CONSTRAINT FK_COMENZI_USERI FOREIGN KEY(ID_USER)
+ 10  REFERENCES USERI(ID_USER)
+ 11  );
+
+Table created.
+
+SQL> DESC USERI
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ ID_USER                                                                                                           NOT NULL NUMBER(5)
+ NUME                                                                                                                       VARCHAR2(20)
+ PRENUME                                                                                                                    VARCHAR2(20)
+ LOCALITATE                                                                                                                 VARCHAR2(20)
+
+SQL> DESC COMENZI
+ Name                                                                                                              Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ ID_COMANDA                                                                                                        NOT NULL NUMBER(6)
+ ID_PROD                                                                                                                    NUMBER(6)
+ CANTITATE                                                                                                                  NUMBER(4)
+ PRET_TOTAL                                                                                                                 NUMBER(9,2)
+ ID_USER                                                                                                                    NUMBER(5)
+
+SQL> INSERT INTO PRODUSE(ID_PRODUS, DENUMIRE, DESCRIERE, PRET, STOC)
+  2  VALUES(1, 'NOTEBOOK ASUS', 'GAMING LAPTOP', 4000, 2);
+
+1 row created.
+
+SQL> INSERT INTO PRODUSE(ID_PRODUS, DENUMIRE, DESCRIERE, PRET, STOC)
+  2  VALUES(2, 'NOTEBOOK ACER', 'SUPERGAMING LAPTOP', 4500, 2);
+
+1 row created.
+
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+
+SQL> INSERT INTO PRODUSE
+  2  VALUES(3, 'NOTEBOOK HP', 'SLIM LAPTOP', 3500, 5);
+
+1 row created.
+
+SQL> VALUES(2, 'NOTEBOOK ACER', 'SUPERGAMING LAPTOP', 4500, 2);
+SP2-0734: unknown command beginning "VALUES(2, ..." - rest of line ignored.
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+         3 NOTEBOOK HP          SLIM LAPTOP                3500          5                                                                                                                              
+
+SQL> INSERT INTO PRODUSE(ID_PRODUS, DENUMIRE, DESCRIERE, PRET, STOC)
+  2  VALUES(4, 'NOTEBOOK NONAME', 1500, 3);
+VALUES(4, 'NOTEBOOK NONAME', 1500, 3)
+*
+ERROR at line 2:
+ORA-00947: not enough values 
+
+
+SQL> INSERT INTO PRODUSE(ID_PRODUS, DENUMIRE, PRET, STOC)
+  2  VALUES(4, 'NOTEBOOK NONAME', 1500, 3);
+
+1 row created.
+
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+         3 NOTEBOOK HP          SLIM LAPTOP                3500          5                                                                                                                              
+         4 NOTEBOOK NONAME                                 1500          3                                                                                                                              
+
+SQL> INSERT INTO USERI(ID_USER, NUME, PRENUME, LOCALITATE)
+  2  VALUES(1, 'MIHAI', 'DARIUS', 'BUCURESTI');
+
+1 row created.
+
+SQL> INSERT INTO COMENZI(ID_COMANDA, ID_PROD, CANTITATE, PRET_TOTAL, ID_USER)
+  2  VALUES(1, 3, 1, 3500, 1);
+
+1 row created.
+
+SQL> SELECT * FROM COMENZI;
+
+ID_COMANDA    ID_PROD  CANTITATE PRET_TOTAL    ID_USER                                                                                                                                                  
+---------- ---------- ---------- ---------- ----------                                                                                                                                                  
+         1          3          1       3500          1                                                                                                                                                  
+
+SQL> SELECT * FROM USERI;
+
+   ID_USER NUME                 PRENUME              LOCALITATE                                                                                                                                         
+---------- -------------------- -------------------- --------------------                                                                                                                               
+         1 MIHAI                DARIUS               BUCURESTI                                                                                                                                          
+
+SQL> UPDATE PRODUSE SET PRET = 3700 WHERE ID_PROD = 3;
+UPDATE PRODUSE SET PRET = 3700 WHERE ID_PROD = 3
+                                     *
+ERROR at line 1:
+ORA-00904: "ID_PROD": invalid identifier 
+
+
+SQL> UPDATE PRODUSE SET PRET = 3700 WHERE ID_PRODUS = 3;
+
+1 row updated.
+
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+         3 NOTEBOOK HP          SLIM LAPTOP                3700          5                                                                                                                              
+         4 NOTEBOOK NONAME                                 1500          3                                                                                                                              
+
+SQL> UPDATE PRODUSE SET PRET = 3700 WHERE DENUMIRE= 'NOTEBOOK HP';
+
+1 row updated.
+
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+         3 NOTEBOOK HP          SLIM LAPTOP                3700          5                                                                                                                              
+         4 NOTEBOOK NONAME                                 1500          3                                                                                                                              
+
+SQL> UPDATE PRODUSE SET PRET = 3700 WHERE DENUMIRE= 'NOTEBOOK NONAME';
+
+1 row updated.
+
+SQL> SELECT * FROM PRODUSE;
+
+ ID_PRODUS DENUMIRE             DESCRIERE                  PRET       STOC                                                                                                                              
+---------- -------------------- -------------------- ---------- ----------                                                                                                                              
+         1 NOTEBOOK ASUS        GAMING LAPTOP              4000          2                                                                                                                              
+         2 NOTEBOOK ACER        SUPERGAMING LAPTOP         4500          2                                                                                                                              
+         3 NOTEBOOK HP          SLIM LAPTOP                3700          5                                                                                                                              
+         4 NOTEBOOK NONAME                                 3700          3                                                                                                                              
+
+SQL> SPOOL OFF

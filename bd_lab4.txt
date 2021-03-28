@@ -1,0 +1,120 @@
+desc dept
+desc emp
+desc salgrade
+
+SELECT EMPNO, ENAME, SAL, DEPTNO
+FROM EMP
+WHERE SAL > 1400
+ORDER BY SAL desc, ename;
+
+
+-- departamentele situate in CHICAGO
+SELECT * FROM DEPT
+WHERE LOC LIKE 'CHI%';
+
+SELECT * FROM DEPT
+WHERE LOC LIKE '%A%';
+
+
+-- angajati care au sef pe angajatul cu id-ul 7902(7910), ordonate dupa salariu, descendent
+SELECT * FROM EMP
+WHERE
+MGR=7902
+ORDER BY SAL DESC;
+
+SELECT * FROM EMP
+WHERE
+MGR=7910
+ORDER BY SAL DESC
+
+
+--in
+select * from emp
+where
+mgr in (7902, 7910)
+order by sal desc;
+
+--or
+select * from emp
+where
+mgr=7902
+or
+mgr=7910
+order by sal desc;
+
+create table salariati_bine_platiti
+as
+select ename, empno, sal, deptno FROM EMP
+where
+sal >&salariu;
+
+SELECT * FROM salariati_bine_platiti;
+
+drop table salariati_bine_platiti;
+
+--TABELA CONTINAND TOTI SUBORDONATII ANGAJULUI CU ID-UL 7839
+create table subordonati
+as
+select ename, empno, sal, deptno FROM EMP
+where
+mgr=7839
+order by ename;
+
+SELECT * FROM EMP;
+
+
+SELECT * FROM SUBORDONATI;
+
+
+DROP TABLE SUBORDONATI;
+
+--TOTI ANGAJATII VENITI DUPA O ANUMITA DATA
+SELECT * FROM EMP
+WHERE
+HIREDATE > TO_DATE('01-03-1981', 'DD-MM-YYYY');
+
+SELECT * FROM EMP WHERE TO_CHAR(HIREDATE, 'DD-MM-YYYY') = '20-02-1981';
+
+--angajatii veniti in firma intre 2 aprilie 1981 si 2 decembrie 1981
+select * from emp
+where
+to_char(HIREDATE, 'YYYY-MM-DD') between '1981-04-02' and '1981-12-02';
+
+
+select * from emp
+where
+hiredate between to_date('02-04-1981', 'DD-MM-YYYY') and to_date('02-12-1981', 'DD-MM-YYYY');
+
+select * from emp
+where
+hiredate > '01-MAR-81';
+
+
+--angajatii care nu au comision
+select * from emp where comm is null;
+
+--angajatii cu comision
+select * from emp where comm is not null and comm>0;
+
+--angajatii fara comision var 2
+select * from emp where not(comm is not null and comm>0);
+
+select * from emp where comm is null or (comm=0 and comm is not null);
+
+select 1 from emp;
+
+select 'angajatul cu id'|| empno || 'a fost angajat in data de' || hiredate, ename, sal, sysdate
+from emp
+where sal >1500;
+
+--angajatii care fac parte din departamentul cu locatia in chicago-jonctiunea
+
+select empno, sal, ename
+from emp, dept
+where
+emp.deptno=dept.deptno
+and
+dept.loc='CHICAGO';
+
+
+
